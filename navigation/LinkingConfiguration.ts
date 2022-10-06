@@ -28,9 +28,6 @@ const linking: LinkingOptions<RootStackParamList> = {
             screens: {
               ModalScreen: "modal",
               path: "movies/:id",
-              parse: {
-                id: (id: string) => +id,
-              },
             },
           },
         },
