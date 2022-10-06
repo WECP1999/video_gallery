@@ -1,25 +1,28 @@
-import { StyleSheet } from "react-native";
+import { ScrollView, StyleSheet } from "react-native";
+import MovieCarousel from "../../components/movies/movieCarousel";
 import { Text, View } from "../../components/Themed";
+import movieCollection from "../../constants/mocks/movies.mock";
 import { RootTabScreenProps } from "../../utils/types/types";
 
 const MovieScreen = ({ navigation }: RootTabScreenProps<"Movies">) => {
   return (
-    <View style={styles.container}>
-      <Text style={styles.title}>Tab One</Text>
-      <View
-        style={styles.separator}
-        lightColor='#eee'
-        darkColor='rgba(255,255,255,0.1)'
-      />
-    </View>
+    <ScrollView style={styles.container}>
+      {movieCollection.map((category) => (
+        <View key={category.id}>
+          <Text style={{ fontSize: 20, fontWeight: "bold", marginTop: 16 }}>
+            {category.category}
+          </Text>
+          <MovieCarousel movies={category.movies} />
+        </View>
+      ))}
+    </ScrollView>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    alignItems: "center",
-    justifyContent: "center",
+    paddingHorizontal: 8,
+    backgroundColor: "#fff"
   },
   title: {
     fontSize: 20,
