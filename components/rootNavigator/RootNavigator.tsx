@@ -1,3 +1,4 @@
+import React from "react";
 import ModalScreen from "../../screens/modalScreen";
 import NotFoundScreen from "../../screens/notFoundScreen";
 import Stack from "../../utils/navigation/Stack";
@@ -17,7 +18,11 @@ const RootNavigator = () => {
         options={{ title: "Oops!" }}
       />
       <Stack.Group screenOptions={{ presentation: "modal" }}>
-        <Stack.Screen name='Modal' component={ModalScreen} />
+        <Stack.Screen
+          name='MovieDetail'
+          options={{ title: "Detalle" }}
+          component={ModalScreen}
+        />
       </Stack.Group>
     </Stack.Navigator>
   );

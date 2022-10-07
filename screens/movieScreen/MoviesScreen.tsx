@@ -12,7 +12,11 @@ const MovieScreen = ({ navigation }: RootTabScreenProps<"Movies">) => {
           <Text style={{ fontSize: 20, fontWeight: "bold", marginTop: 16 }}>
             {category.category}
           </Text>
-          <MovieCarousel movies={category.movies} />
+          <MovieCarousel
+            movies={category.movies}
+            category={category.id}
+            navigation={navigation}
+          />
         </View>
       ))}
     </ScrollView>
@@ -22,7 +26,7 @@ const MovieScreen = ({ navigation }: RootTabScreenProps<"Movies">) => {
 const styles = StyleSheet.create({
   container: {
     paddingHorizontal: 8,
-    backgroundColor: "#fff"
+    backgroundColor: "#fff",
   },
   title: {
     fontSize: 20,

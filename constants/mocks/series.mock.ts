@@ -1,151 +1,168 @@
 import ICategory from "../../utils/interfaces/ICategory";
-import IMovie from "../../utils/interfaces/IMovie";
+import ISeries from "../../utils/interfaces/ISeries";
 
-const movieCollection: readonly ICategory<IMovie>[] = Object.freeze([
+const seriesCollection: readonly ICategory<ISeries>[] = Object.freeze([
   {
     id: 1,
-    category: "Acción",
+    category: "Comedia",
     movies: [
       {
         id: 1,
-        name: "Pulp Fiction",
+        name: "Barakamon",
         imagePreview:
-          "https://m.media-amazon.com/images/M/MV5BNGNhMDIzZTUtNTBlZi00MTRlLWFjM2ItYzViMjE3YzI5MjljXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_.jpg",
-        movieUri: "https://www.youtube.com/watch?v=tGpTpVyI_OQ",
+          "https://m.media-amazon.com/images/M/MV5BYWM4YThiZGItMzUxNi00ZjllLWI0OWMtMjFhZTQxYjM4NDQ4XkEyXkFqcGdeQXVyNDgyODgxNjE@._V1_FMjpg_UX1000_.jpg",
+        trailerUri: "https://www.youtube.com/watch?v=1gmN_3kr4wo",
+        seasons: 1,
       },
       {
         id: 2,
-        name: "Nobody",
+        name: "Spy x Family",
         imagePreview:
-          "https://m.media-amazon.com/images/M/MV5BMjJiYjdjNWEtODNiMS00MTBiLWE4NTAtNGNjMDgxZWQzMTgyXkEyXkFqcGdeQXVyMTA3MDk2NDg2._V1_.jpg",
-        movieUri: "",
+          "https://m.media-amazon.com/images/M/MV5BMWM4Njg2MjUtODU3OS00MGNmLWIyNTctZGZkNTdjN2JhNmU2XkEyXkFqcGdeQXVyMTMzNDExODE5._V1_FMjpg_UX1000_.jpg",
+        trailerUri: "https://www.youtube.com/watch?v=44qfOGvEWAU",
+        seasons: 2,
       },
       {
         id: 3,
-        name: "John Wick",
+        name: "Kotaro Lives Alone",
         imagePreview:
-          "https://m.media-amazon.com/images/M/MV5BMTU2NjA1ODgzMF5BMl5BanBnXkFtZTgwMTM2MTI4MjE@._V1_.jpg",
-        movieUri: "",
+          "https://m.media-amazon.com/images/M/MV5BYzlhYzEwNDctMTY1ZC00M2JiLWIzZTAtMWE5YzBkODIwNDgwXkEyXkFqcGdeQXVyNjAwNDUxODI@._V1_FMjpg_UX1000_.jpg",
+        trailerUri: "https://www.youtube.com/watch?v=WLzmLUtVkxA",
+        seasons: 1,
       },
       {
         id: 4,
-        name: "Blade",
+        name: "Hitoribocchi no Marumaruseikatsu",
         imagePreview:
-          "https://m.media-amazon.com/images/M/MV5BOTk2NDNjZWQtMGY0Mi00YTY2LWE5MzctMGRhZmNlYzljYTg5XkEyXkFqcGdeQXVyMTAyNjg4NjE0._V1_.jpg",
-        movieUri: "",
+          "https://m.media-amazon.com/images/M/MV5BM2M4MDRmZjQtYzYzNi00ZjA0LWFhYzctY2MwOTllN2UxZjM5XkEyXkFqcGdeQXVyMzgxODM4NjM@._V1_FMjpg_UX1000_.jpg",
+        trailerUri: "https://www.youtube.com/watch?v=FCjtykwyN_8",
+        seasons: 2,
       },
       {
         id: 5,
-        name: "Matrix",
+        name: "Komi-san wa, Komyushō Desu",
         imagePreview:
-          "https://m.media-amazon.com/images/M/MV5BNzQzOTk3OTAtNDQ0Zi00ZTVkLWI0MTEtMDllZjNkYzNjNTc4L2ltYWdlXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_.jpg",
-        movieUri: "",
+          "https://m.media-amazon.com/images/M/MV5BM2M4MDRmZjQtYzYzNi00ZjA0LWFhYzctY2MwOTllN2UxZjM5XkEyXkFqcGdeQXVyMzgxODM4NjM@._V1_FMjpg_UX1000_.jpg",
+        trailerUri: "https://www.youtube.com/watch?v=tLdLTSnmnoA",
+        seasons: 2,
       },
       {
         id: 6,
-        name: "Dunkirk",
+        name: "Kawaii dake ja Nai Shikimori-san",
         imagePreview:
-          "https://m.media-amazon.com/images/M/MV5BN2YyZjQ0NTEtNzU5MS00NGZkLTg0MTEtYzJmMWY3MWRhZjM2XkEyXkFqcGdeQXVyMDA4NzMyOA@@._V1_.jpg",
-        movieUri: "",
+          "https://somoskudasai.com/wp-content/uploads/2021/10/shikimori_visual.jpg",
+        trailerUri: "https://www.youtube.com/watch?v=Cv9pwJdRNwE",
+        seasons: 1,
       },
     ],
   },
   {
     id: 2,
-    category: "Romance",
+    category: "Aventura",
     movies: [
       {
         id: 1,
-        name: "Brokeback Mountain",
+        name: "One Piece",
         imagePreview:
-          "https://m.media-amazon.com/images/M/MV5BMTY5NTAzNTc1NF5BMl5BanBnXkFtZTYwNDY4MDc3._V1_.jpg",
-        movieUri: "https://www.youtube.com/watch?v=tGpTpVyI_OQ",
+          "https://m.media-amazon.com/images/M/MV5BODcwNWE3OTMtMDc3MS00NDFjLWE1OTAtNDU3NjgxODMxY2UyXkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_.jpg",
+        trailerUri: "https://www.youtube.com/watch?v=89JWRYEIG-s",
+        seasons: 20,
       },
       {
         id: 2,
-        name: "La La Land",
+        name: "Hunter X Hunter",
         imagePreview:
-          "https://cdn.shopify.com/s/files/1/0057/3728/3618/products/6294ae3e57013170bfffc9e8d77379c3_500x.jpg?v=1573617350",
-        movieUri: "",
+          "https://m.media-amazon.com/images/M/MV5BNGM0YTk3MWEtN2JlZC00ZmZmLWIwMDktZTMxZGE5Zjc2MGExXkEyXkFqcGdeQXVyNjAwNDUxODI@._V1_FMjpg_UX1000_.jpg",
+        trailerUri: "https://www.youtube.com/watch?v=F_YR1T_MdCI",
+        seasons: 6,
       },
       {
         id: 3,
-        name: "Me Before You",
-        imagePreview:
-          "https://es.web.img3.acsta.net/pictures/16/02/04/15/49/599815.jpg",
-        movieUri: "",
+        name: "Vinland Saga",
+        imagePreview: "https://flxt.tmsimg.com/assets/p17127060_b_v9_aa.jpg",
+        trailerUri: "https://www.youtube.com/watch?v=f8JrZ7Q_p-8",
+        seasons: 1,
       },
       {
         id: 4,
-        name: "The Notebook",
+        name: "Naruto",
         imagePreview:
-          "https://m.media-amazon.com/images/M/MV5BOTk2NDNjZWQtMGY0Mi00YTY2LWE5MzctMGRhZmNlYzljYTg5XkEyXkFqcGdeQXVyMTAyNjg4NjE0._V1_.jpg",
-        movieUri: "",
+          "https://m.media-amazon.com/images/M/MV5BMDI3ZDY4MDgtN2U2OS00Y2YzLWJmZmYtZWMzOTM3YWFjYmUyXkEyXkFqcGdeQXVyNjAwNDUxODI@._V1_.jpg",
+        trailerUri: "https://www.youtube.com/watch?v=-G9BqkgZXRA",
+        seasons: 9,
       },
       {
         id: 5,
-        name: "Eternal Sunshine Of The Spotless Mind",
+        name: "Gintama",
         imagePreview:
-          "https://m.media-amazon.com/images/M/MV5BMTY4NzcwODg3Nl5BMl5BanBnXkFtZTcwNTEwOTMyMw@@._V1_.jpg",
-        movieUri: "",
+          "https://m.media-amazon.com/images/M/MV5BZmNiZTk5MDQtMjIwMi00ZDU4LTgxOWMtODYwOGU5N2E5YzY0XkEyXkFqcGdeQXVyNjAwNDUxODI@._V1_FMjpg_UX1000_.jpg",
+        trailerUri: "https://www.youtube.com/watch?v=YQC3ot0IjiA",
+        seasons: 8,
       },
       {
         id: 6,
-        name: "Your Name",
+        name: "Castlevania",
         imagePreview:
-          "https://m.media-amazon.com/images/M/MV5BNGYyNmI3M2YtNzYzZS00OTViLTkxYjAtZDIyZmE1Y2U1ZmQ2XkEyXkFqcGdeQXVyMTA4NjE0NjEy._V1_.jpg",
-        movieUri: "",
+          "https://static.wikia.nocookie.net/castlevania/images/3/31/Castlevania_Season_4_Official_Poster_Art.jpg/revision/latest?cb=20210415171038",
+        trailerUri: "https://www.youtube.com/watch?v=L7iWXfZzEMc",
+        seasons: 4,
       },
     ],
   },
   {
     id: 3,
-    category: "Comedia",
+    category: "Fantasía",
     movies: [
       {
         id: 1,
-        name: "Sausage Party",
+        name: "Fairy Tail",
         imagePreview:
-          "https://m.media-amazon.com/images/M/MV5BMjkxOTk1MzY4MF5BMl5BanBnXkFtZTgwODQzOTU5ODE@._V1_FMjpg_UX1000_.jpg",
-        movieUri: "https://www.youtube.com/watch?v=tGpTpVyI_OQ",
+          "https://m.media-amazon.com/images/M/MV5BMzZjNmRhNWQtNTAyYy00Yjk2LWE0NzUtMmYyNTU0YTE5NjJiXkEyXkFqcGdeQXVyNjI4OTE5OTM@._V1_FMjpg_UX1000_.jpg",
+        trailerUri: "https://www.youtube.com/watch?v=4KSN7mxhiYE",
+        seasons: 21,
       },
       {
         id: 2,
-        name: "Sonic The Hedgehog",
+        name: "Jujutsu Kaisen",
         imagePreview:
-          "https://m.media-amazon.com/images/M/MV5BNTdmNmI4MzQtZTAzNS00MjhjLWEzOGQtZjI1NDNjZjk4N2JjXkEyXkFqcGdeQXVyMTM0NTUzNDIy._V1_FMjpg_UX1000_.jpg",
-        movieUri: "",
+          "https://m.media-amazon.com/images/M/MV5BNGY4MTg3NzgtMmFkZi00NTg5LWExMmEtMWI3YzI1ODdmMWQ1XkEyXkFqcGdeQXVyMjQwMDg0Ng@@._V1_.jpg",
+        trailerUri: "https://www.youtube.com/watch?v=aPBUUJbrAWo",
+        seasons: 1,
       },
       {
         id: 3,
-        name: "Don't Look Up",
+        name: "Jojo's Bizarre Adventure",
         imagePreview:
-          "https://m.media-amazon.com/images/M/MV5BZjcwZjY3NjAtNzkxZS00NmFjLTg1OGYtODJmMThhY2UwMTc5XkEyXkFqcGdeQXVyODE5NzE3OTE@._V1_FMjpg_UX1000_.jpg",
-        movieUri: "",
+          "https://m.media-amazon.com/images/M/MV5BZDc3NGQ3ZWQtYjNkOC00MjhiLTg2N2YtNmZlOGNiZTFkOWNhXkEyXkFqcGdeQXVyNjc2NjA5MTU@._V1_FMjpg_UX1000_.jpg",
+        trailerUri: "https://www.youtube.com/watch?v=R6PXCd14ynY",
+        seasons: 5,
       },
       {
         id: 4,
-        name: "Tropic Thunder",
+        name: "One Punch Man",
         imagePreview:
-          "https://m.media-amazon.com/images/M/MV5BNDE5NjQzMDkzOF5BMl5BanBnXkFtZTcwODI3ODI3MQ@@._V1_.jpg",
-        movieUri: "",
+          "https://m.media-amazon.com/images/M/MV5BMTNmZDE2NDEtNTg3MS00OTE1LThlZGUtOGZkZTg0NTUyNGVmXkEyXkFqcGdeQXVyNTgyNTA4MjM@._V1_FMjpg_UX1000_.jpg",
+        trailerUri: "https://www.youtube.com/watch?v=Poo5lqoWSGw",
+        seasons: 2,
       },
       {
         id: 5,
-        name: "Rush Hour",
+        name: "Avatar",
         imagePreview:
-          "https://m.media-amazon.com/images/M/MV5BYWM2NDZmYmYtNzlmZC00M2MyLWJmOGUtMjhiYmQ2OGU1YTE1L2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_.jpg",
-        movieUri: "",
+          "https://m.media-amazon.com/images/M/MV5BODc5YTBhMTItMjhkNi00ZTIxLWI0YjAtNTZmOTY0YjRlZGQ0XkEyXkFqcGdeQXVyODUwNjEzMzg@._V1_FMjpg_UX1000_.jpg",
+        trailerUri: "https://www.youtube.com/watch?v=IyZ0xetSb9s",
+        seasons: 4,
       },
       {
         id: 6,
-        name: "The Truman Show",
+        name: "Saint Seiya: The Lost Canvas",
         imagePreview:
-          "https://m.media-amazon.com/images/M/MV5BMDIzODcyY2EtMmY2MC00ZWVlLTgwMzAtMjQwOWUyNmJjNTYyXkEyXkFqcGdeQXVyNDk3NzU2MTQ@._V1_.jpg",
-        movieUri: "",
+          "https://m.media-amazon.com/images/M/MV5BNWQ5OThkNDYtNzYzZS00Zjg3LTgyYzEtM2NjNGE4ZmVmZjg4XkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_FMjpg_UX1000_.jpg",
+        trailerUri: "https://www.youtube.com/watch?v=2a0wDrpuvlo",
+        seasons: 1,
       },
     ],
   },
 ]);
 
-export default movieCollection;
+export default seriesCollection;

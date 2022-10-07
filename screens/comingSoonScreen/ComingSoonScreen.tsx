@@ -1,16 +1,41 @@
-import { StyleSheet } from "react-native";
+import React from "react";
+import { ScrollView, StyleSheet } from "react-native";
 import { Text, View } from "../../components/Themed";
+import Video from "../../components/video";
+import comingSoonCollection from "../../constants/mocks/comingSoon.mock";
 
 const ComingSoonScreen = () => {
   return (
-    <View style={styles.container}>
-      <Text style={styles.title}>Tab Three</Text>
-      <View
-        style={styles.separator}
-        lightColor='#eee'
-        darkColor='rgba(255,255,255,0.1)'
-      />
-    </View>
+    <ScrollView style={styles.container}>
+      {comingSoonCollection.map((item, index) => (
+        <View key={item.id}>
+          <Video uri={item.trailerUri} />
+          <View style={styles.detailContainer}>
+            <Text style={styles.title}>{item.name}</Text>
+            <Text style={styles.category}>
+              Categoria:
+              <Text style={{ fontWeight: "400" }}> {item.category}</Text>
+            </Text>
+            <Text style={styles.category}>
+              Fecha de estreno:
+              <Text style={{ fontWeight: "400" }}> {item.releaseDate}</Text>
+            </Text>
+          </View>
+          {index + 1 < comingSoonCollection.length && (
+            <View
+              style={{
+                width: "100%",
+                height: 1,
+                backgroundColor: "rgb(237, 241, 247);",
+                position: "absolute",
+                zIndex: 1,
+                top: -8,
+              }}
+            />
+          )}
+        </View>
+      ))}
+    </ScrollView>
   );
 };
 
@@ -19,16 +44,21 @@ export default ComingSoonScreen;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: "center",
-    justifyContent: "center",
+    marginTop: 8,
+    paddingHorizontal: 8,
+    backgroundColor: "#fff",
+    position: "relative"
   },
   title: {
-    fontSize: 20,
+    fontSize: 24,
     fontWeight: "bold",
   },
-  separator: {
-    marginVertical: 30,
-    height: 1,
-    width: "80%",
+  category: {
+    fontSize: 14,
+    fontWeight: "bold",
+    marginTop: 8,
+  },
+  detailContainer: {
+    marginVertical: 16,
   },
 });

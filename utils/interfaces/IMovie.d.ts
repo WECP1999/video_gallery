@@ -2,7 +2,7 @@ interface IMovie {
   id: number;
   name: string;
   imagePreview: string;
-  movieUri: string;
+  trailerUri: string;
 }
 
 export default IMovie;

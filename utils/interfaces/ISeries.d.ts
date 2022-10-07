@@ -1,13 +1,9 @@
 interface ISeries {
   id: number;
   name: string;
+  imagePreview: string;
   trailerUri: string;
-  seasons: ISeason[];
-}
-
-export interface ISeason {
-  seasonNumber: number;
-  name: string;
+  seasons: number;
 }
 
 export default ISeries;
